@@ -20,13 +20,23 @@
             </div>
             
             <!-- Menú desktop (centro-derecha) -->
-            <div class="hidden md:flex space-x-6 ">
-                <ul class="hidden md:flex items-center space-x-10 text-blue-deep dark:text-white font-bold text-sm">
-                    <li class="tracking-wide"><a href="index.html" class="hover:text-orange-standard">Inicio</a></li>
-                    <li class="tracking-wide"><a href="#" class="hover:text-orange-standard">Catalogo</a></li>
-                    <li class="tracking-wide"><a href="formulario.html" class="hover:text-orange-standard">Contacto</a></li>
-                </ul>
-            </div>
+            <div class="hidden md:flex items-center space-x-10">
+    <ul class="flex items-center space-x-10 text-white font-bold text-sm">
+        <li><a href="index.html" class="hover:text-orange-standard">Inicio</a></li>
+        <li><a href="productos.html" class="hover:text-orange-standard">Catálogo</a></li>
+        <li><a href="formulario.html" class="hover:text-orange-standard">Contacto</a></li>
+    </ul>
+
+    <div id="session-container" class="flex items-center space-x-4">
+        <span id="welcome-message" class="text-white text-sm font-medium hidden"></span>
+        
+        <a id="session-link" href="login.html" 
+           class="bg-orange-standard text-white font-bold text-sm py-2 px-4 rounded-md 
+                  hover:bg-orange-dark transition-colors duration-300">
+            Iniciar Sesión
+        </a>
+    </div>
+</div>
 
             <!-- Botón burger menú para móvil -->
             <button id="menuButton" class="md:hidden flex items-center px-3 py-2 border rounded text-white border-gray-400 hover:text-orange-standard hover:border-orange-standard focus:outline-none" aria-label="Abrir menú">
@@ -63,5 +73,7 @@
 
     <script src="src/js/Responsive_menu.js"></script>
     <script src="src/js/detalles.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="src/js/auth.js"></script>
 </body>
 </html>
