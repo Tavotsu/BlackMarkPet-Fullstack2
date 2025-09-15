@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function () {
         let products = JSON.parse(localStorage.getItem('products')) || [];
         if (products.length === 0) {
             products = [
-                { id: 1678886400001, name: "Pelota de Goma Resistente", price: 7990, image: "https://http2.mlstatic.com/D_NQ_NP_824703-MLC50130650223_052022-O.webp", description: "Juguete duradero para perros, ideal para morder y jugar a buscar." },
-                { id: 1678886400002, name: "Alimento Seco Premium 15kg", price: 29990, image: "https://www.lider.cl/preunic/images/product/2126201-00-000/2126201-00-000_1_1080.jpg", description: "Nutrición completa para perros adultos de todas las razas." },
-                { id: 1678886400003, name: "Arena Sanitaria para Gatos", price: 12490, image: "https://cdn.shopify.com/s/files/1/0102/3742/files/GANADOR_PREMIUM_CACHORRO_RAZAS_PEQUENAS_RENDER_5.jpg?v=1688151977", description: "Arena aglomerante con control de olores para la higiene de tu gato." },
-                { id: 1678886400004, name: "Rascador de Cartón", price: 9990, image: "https://falabella.scene7.com/is/image/Falabella/gsc_122391262_3306869_1?wid=800&hei=800&qlt=70", description: "Rascador para gatos que ayuda a mantener sus uñas sanas y a proteger tus muebles." },
-                { id: 1678886400005, name: "Collar Reflectante Ajustable", price: 5990, image: "https://m.media-amazon.com/images/I/719MX2q6aJL.jpg", description: "Collar de nylon con bandas reflectantes para paseos nocturnos seguros." },
+                { id: 1678886400001, name: "Pelota de Goma Resistente", price: 7990, image: "https://arenaparamascotas.cl/wp-content/uploads/2024/01/pelota-sonido-perros-800x800.webp", description: "Juguete duradero para perros, ideal para morder y jugar a buscar." },
+                { id: 1678886400002, name: "Alimento Seco Premium 15kg", price: 29990, image: "https://media.falabella.com/sodimacCL/186971X_01/w=800,h=800,fit=pad", description: "Nutrición completa para perros adultos de todas las razas." },
+                { id: 1678886400003, name: "Arena Sanitaria para Gatos", price: 12490, image: "https://petvet.cl/cdn/shop/files/arena-sanitaria-para-gato-traper-784591.jpg?v=1714233684", description: "Arena aglomerante con control de olores para la higiene de tu gato." },
+                { id: 1678886400004, name: "Rascador de Cartón", price: 9990, image: "https://m.media-amazon.com/images/I/71On4tqmzkL.jpg", description: "Rascador para gatos que ayuda a mantener sus uñas sanas y a proteger tus muebles." },
+                { id: 1678886400005, name: "Collar Reflectante Ajustable", price: 5990, image: "https://http2.mlstatic.com/D_Q_NP_2X_846994-CBT82409776456_022025-T-collar-de-perro-reflectante-con-hebilla-ajustable-de-segurid.webp", description: "Collar de nylon con bandas reflectantes para paseos nocturnos seguros." },
             ];
             localStorage.setItem('products', JSON.stringify(products));
             console.log('Productos de ejemplo añadidos.');
