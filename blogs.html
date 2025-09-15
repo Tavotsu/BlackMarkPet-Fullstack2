@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contáctanos - BlackMarkpet</title>
-    <link rel="stylesheet" href="src/output.css"> 
+    <title>Blogs - BlackMarkpet</title>
+    <link rel="stylesheet" href="src/output.css">
     <link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 </head>
 <body class="bg-neutral-900 text-white flex flex-col min-h-screen">
@@ -53,28 +53,30 @@
         </div>
     </nav>
 
-    <main class="container mx-auto px-6 py-12 flex-grow">
-        <h1 class="text-3xl font-bold text-center text-white mb-8">Contáctanos</h1>
-        <form id="contactForm" class="max-w-lg mx-auto bg-neutral-800 p-8 rounded-lg shadow-lg" novalidate>
-            <div class="mb-6">
-                <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Nombre:</label>
-                <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-lg bg-neutral-700 border border-neutral-600 text-white focus:outline-none focus:ring-2 focus:ring-orange-standard" required>
-                <p id="nameError" class="text-red-500 text-xs italic mt-2 hidden">Por favor, ingresa tu nombre.</p>
-            </div>
-            <div class="mb-6">
-                <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg bg-neutral-700 border border-neutral-600 text-white focus:outline-none focus:ring-2 focus:ring-orange-standard" required>
-                <p id="emailError" class="text-red-500 text-xs italic mt-2 hidden">Por favor, ingresa un correo válido.</p>
-            </div>
-            <div class="mb-6">
-                <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-neutral-700 border border-neutral-600 text-white focus:outline-none focus:ring-2 focus:ring-orange-standard" required></textarea>
-                <p id="messageError" class="text-red-500 text-xs italic mt-2 hidden">El mensaje no puede estar vacío.</p>
-            </div>
-            <div class="text-center">
-                <button type="submit" class="bg-orange-standard hover:bg-orange-dark text-white font-bold py-2 px-6 rounded-lg transition duration-300">Enviar Mensaje</button>
-            </div>
-        </form>
+    <main class="max-w-6xl mx-auto px-4 py-12 flex-grow">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-2">Noticias y Consejos</h1>
+            <p class="text-neutral-400 mb-10">Mantente al día con nuestras últimas novedades y consejos para el cuidado de tu mascota.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="detalle-blog.html?id=1" class="group relative block bg-black rounded-lg shadow-lg overflow-hidden h-80">
+                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=800&q=80" alt="Noticia 1" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-300">
+                <div class="relative p-8 flex flex-col justify-end h-full">
+                    <h2 class="text-2xl font-bold mb-2 text-white">Pronto! Tratamiento veterinario en la tienda</h2>
+                    <p class="text-neutral-300 mb-4">Accede a servicios profesionales directamente en nuestra tienda.</p>
+                    <span class="font-semibold text-orange-standard group-hover:underline">Ver caso →</span>
+                </div>
+            </a>
+            <a href="detalle-blog.html?id=2" class="group relative block bg-black rounded-lg shadow-lg overflow-hidden h-80">
+                <img src="https://i.ytimg.com/vi/7lfy6NV9u24/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AGuCYAC0AWKAgwIABABGD4gZShRMA8=&rs=AOn4CLDJhMD5uqPl8q7noHRr7FOXVm05hw" alt="Noticia 2" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-300">
+                <div class="relative p-8 flex flex-col justify-end h-full">
+                    <h2 class="text-2xl font-bold mb-2 text-white">Campaña de Adopción Exitosamente Culminada</h2>
+                    <p class="text-neutral-300 mb-4">Más de 200 animales encontraron un nuevo hogar gracias a nuestra campaña.</p>
+                    <span class="font-semibold text-orange-standard group-hover:underline">Ver caso →</span>
+                </div>
+            </a>
+        </div>
     </main>
 
     <footer class="mt-auto w-full">
@@ -86,10 +88,8 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="src/js/Responsive_menu.js" defer></script>
     <script src="src/js/shared.js"></script> 
     <script src="src/js/auth.js"></script>
-    <script src="src/js/validacion.js"></script>
 </body>
 </html>

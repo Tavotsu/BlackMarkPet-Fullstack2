@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contáctanos - BlackMarkpet</title>
-    <link rel="stylesheet" href="src/output.css"> 
+    <title>Nosotros - BlackMarkpet</title>
+    <link rel="stylesheet" href="src/output.css">
     <link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 </head>
 <body class="bg-neutral-900 text-white flex flex-col min-h-screen">
@@ -53,28 +53,41 @@
         </div>
     </nav>
 
-    <main class="container mx-auto px-6 py-12 flex-grow">
-        <h1 class="text-3xl font-bold text-center text-white mb-8">Contáctanos</h1>
-        <form id="contactForm" class="max-w-lg mx-auto bg-neutral-800 p-8 rounded-lg shadow-lg" novalidate>
-            <div class="mb-6">
-                <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Nombre:</label>
-                <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-lg bg-neutral-700 border border-neutral-600 text-white focus:outline-none focus:ring-2 focus:ring-orange-standard" required>
-                <p id="nameError" class="text-red-500 text-xs italic mt-2 hidden">Por favor, ingresa tu nombre.</p>
+    <main class="max-w-5xl mx-auto px-4 py-12 flex-grow">
+        <div class="text-center">
+            <h1 class="text-5xl font-extrabold mb-4">Nuestra Misión: Cuidado y Bienestar Animal</h1>
+            <p class="text-xl text-neutral-300 mb-12 max-w-3xl mx-auto">
+                En BlackMarkpet, somos más que una tienda; somos un centro dedicado a la salud integral de tus mascotas, combinando servicios veterinarios de excelencia con productos de la más alta calidad.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
+            <div>
+                <h2 class="text-3xl font-bold mb-4 text-orange-standard">Pasión por los Animales</h2>
+                <p class="text-neutral-400">
+                    Nacimos de una profunda pasión por los animales. Cada miembro de nuestro equipo, desde veterinarios hasta personal de tienda, comparte un compromiso inquebrantable con el bienestar de cada mascota que nos visita. Entendemos que son parte de tu familia, y los tratamos con el mismo respeto y cariño.
+                </p>
             </div>
-            <div class="mb-6">
-                <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg bg-neutral-700 border border-neutral-600 text-white focus:outline-none focus:ring-2 focus:ring-orange-standard" required>
-                <p id="emailError" class="text-red-500 text-xs italic mt-2 hidden">Por favor, ingresa un correo válido.</p>
+            <img src="https://cdn0.expertoanimal.com/es/posts/1/3/2/como_hacer_feliz_a_tu_perro_24231_orig.jpg" alt="Perro feliz" class="rounded-lg shadow-lg w-full h-64 object-cover">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/L6GI2ZSXFZGADESR57UO666ZE4.jpg" class="rounded-lg shadow-lg w-full h-64 object-cover md:order-2">
+            <div class="md:order-1">
+                <h2 class="text-3xl font-bold mb-4 text-orange-standard">Servicios Veterinarios Profesionales</h2>
+                <p class="text-neutral-400">
+                    Ofrecemos una gama completa de servicios veterinarios, desde consultas preventivas y vacunación hasta diagnósticos avanzados y cirugías. Nuestro equipo está en constante formación para aplicar los últimos avances de la medicina veterinaria y garantizar la mejor atención posible para tu compañero.
+                </p>
             </div>
-            <div class="mb-6">
-                <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-neutral-700 border border-neutral-600 text-white focus:outline-none focus:ring-2 focus:ring-orange-standard" required></textarea>
-                <p id="messageError" class="text-red-500 text-xs italic mt-2 hidden">El mensaje no puede estar vacío.</p>
+        </div>
+
+        <div class="text-center mt-16">
+            <h2 class="text-3xl font-bold mb-4">El Equipo Detrás del Proyecto</h2>
+            <div class="flex justify-center gap-8">
+                <p class="text-neutral-400">Gustavo Santana</p>
+                <p class="text-neutral-400">Cristobal Valdebenito</p>
             </div>
-            <div class="text-center">
-                <button type="submit" class="bg-orange-standard hover:bg-orange-dark text-white font-bold py-2 px-6 rounded-lg transition duration-300">Enviar Mensaje</button>
-            </div>
-        </form>
+        </div>
     </main>
 
     <footer class="mt-auto w-full">
@@ -86,10 +99,8 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="src/js/Responsive_menu.js" defer></script>
     <script src="src/js/shared.js"></script> 
     <script src="src/js/auth.js"></script>
-    <script src="src/js/validacion.js"></script>
 </body>
 </html>

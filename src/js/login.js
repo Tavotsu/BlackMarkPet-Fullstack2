@@ -1,32 +1,26 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.getElementById('loginForm');
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    // Inicializar usuarios por defecto si no existen
-    if (!localStorage.getItem('users')) {
-        const defaultUsers = [
-            { email: 'user@example.com', password: 'password', name: 'Usuario de Ejemplo' },
-            { email: 'cristobal@example.com', password: 'password123', name: 'Cristobal' },
-            { email: 'gustavo@example.com', password: 'securepassword', name: 'Gustavo' }
-        ];
-        localStorage.setItem('users', JSON.stringify(defaultUsers));
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    const user = users.find(u => u.email === email && u.password === password);
+
+    if (user) {
+        // Guardamos el usuario actual en sessionStorage para saber quién está conectado
+        sessionStorage.setItem('currentUser', JSON.stringify(user));
+
+        swal("¡Éxito!", "Has iniciado sesión correctamente.", "success")
+            .then(() => {
+                // --- NUEVO: Redirección basada en el rol ---
+                if (user.role === 'admin') {
+                    window.location.href = 'admin.html'; // Redirigir al panel de admin
+                } else {
+                    window.location.href = 'index.html'; // Redirigir a la página principal
+                }
+            });
+    } else {
+        swal("Error", "Correo electrónico o contraseña incorrectos.", "error");
     }
-
-    loginForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-
-        const users = JSON.parse(localStorage.getItem('users'));
-        const foundUser = users.find(user => user.email === email && user.password === password);
-
-        if (foundUser) {
-            localStorage.setItem('currentUser', JSON.stringify(foundUser));
-            swal("¡Éxito!", "Has iniciado sesión correctamente.", "success")
-                .then(() => {
-                    window.location.href = 'index.html';
-                });
-        } else {
-            swal("Error", "Correo electrónico o contraseña incorrectos.", "error");
-        }
-    });
 });

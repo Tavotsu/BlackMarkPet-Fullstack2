@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - BlackMarkpet</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
+</head>
+<body class="bg-neutral-900 text-white">
+
+    <nav class="py-3 bg-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="assets/img/icon.png" alt="Logo" class="h-12">
+                <span class="text-xl font-semibold">Panel de Administración</span>
+            </div>
+            <button id="logoutButton" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Cerrar Sesión</button>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-6">Gestión de Productos</h1>
+
+        <div class="bg-neutral-800 p-6 rounded-lg shadow-lg mb-8">
+            <h2 id="form-title" class="text-2xl font-bold mb-4">Añadir Nuevo Producto</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="product-name" class="block text-sm font-bold mb-2">Nombre del Producto</label>
+                        <input type="text" id="product-name" class="w-full p-2 rounded bg-neutral-700 border border-neutral-600 text-white" required>
+                    </div>
+                    <div>
+                        <label for="product-price" class="block text-sm font-bold mb-2">Precio</label>
+                        <input type="text" id="product-price" class="w-full p-2 rounded bg-neutral-700 border border-neutral-600 text-white" required>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="product-image" class="block text-sm font-bold mb-2">URL de la Imagen</label>
+                        <input type="url" id="product-image" class="w-full p-2 rounded bg-neutral-700 border border-neutral-600 text-white" required>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="product-description" class="block text-sm font-bold mb-2">Descripción</label>
+                        <textarea id="product-description" rows="3" class="w-full p-2 rounded bg-neutral-700 border border-neutral-600 text-white" required></textarea>
+                    </div>
+                </div>
+                <div class="mt-4 flex space-x-4">
+                    <button type="submit" class="bg-orange-standard hover:bg-orange-dark text-white font-bold py-2 px-6 rounded transition duration-300">Guardar Producto</button>
+                    <button type="button" id="cancel-edit" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded transition duration-300 hidden">Cancelar Edición</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="bg-neutral-800 p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-4">Listado de Productos</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full">
+                    <thead class="bg-neutral-700">
+                        <tr>
+                            <th class="py-2 px-4 text-left">Imagen</th>
+                            <th class="py-2 px-4 text-left">Nombre</th>
+                            <th class="py-2 px-4 text-left">Precio</th>
+                            <th class="py-2 px-4 text-left">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="src/js/admin.js"></script>
+</body>
+</html>

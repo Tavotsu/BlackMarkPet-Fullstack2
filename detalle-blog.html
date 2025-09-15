@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestros Productos - BlackMarkpet</title>
+    <title>Detalle del Blog - BlackMarkpet</title>
     <link rel="stylesheet" href="src/output.css">
     <link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 </head>
-<body class="bg-neutral-900 flex flex-col min-h-screen">
+<body class="bg-neutral-900 text-white flex flex-col min-h-screen">
 
     <nav class="py-3 bg-neutral-900">
         <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
             <div class="flex items-center space-x-2 right-full">
-                <a href="index.html"><img src="assets/img/icon.png" alt="Logo" class="ml-0 items-start h-20"></a>
+                <a href="index.html">
+                    <img src="assets/img/icon.png" alt="Logo" class=" ml-0 items-start h-20"> 
+                </a>
                 <span class="text-white text-2xl font-semibold">BlackMarkpet</span>
             </div>
             <div class="hidden md:flex items-center space-x-10">
@@ -28,14 +30,21 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                         <span id="cart-item-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
                     </a>
-                    <div id="guest-view"><a href="login.html" class="bg-orange-standard text-white font-bold text-sm py-2 px-4 rounded-md hover:bg-orange-dark transition-colors duration-300">Iniciar Sesión</a></div>
-                    <div id="user-view" class="hidden items-center space-x-4"><span id="welcome-message" class="text-white text-sm font-medium"></span><button id="logout-button" class="bg-red-600 hover:bg-red-700 text-white font-bold text-sm py-2 px-4 rounded-md transition-colors duration-300">Cerrar Sesión</button></div>
+                    <div id="guest-view">
+                        <a href="login.html" class="bg-orange-standard text-white font-bold text-sm py-2 px-4 rounded-md hover:bg-orange-dark transition-colors duration-300">Iniciar Sesión</a>
+                    </div>
+                    <div id="user-view" class="hidden items-center space-x-4">
+                        <span id="welcome-message" class="text-white text-sm font-medium"></span>
+                        <button id="logout-button" class="bg-red-600 hover:bg-red-700 text-white font-bold text-sm py-2 px-4 rounded-md transition-colors duration-300">Cerrar Sesión</button>
+                    </div>
                 </div>
             </div>
-            <button id="menuButton" class="md:hidden flex items-center px-3 py-2 border rounded text-white border-gray-400 focus:outline-none"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+            <button id="menuButton" class="md:hidden flex items-center px-3 py-2 border rounded text-white border-gray-400 hover:text-orange-standard hover:border-orange-standard focus:outline-none" aria-label="Abrir menú">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
         </div>
         <div id="mobileMenu" class="hidden md:hidden bg-neutral-800 p-4 space-y-4">
-             <a href="index.html" class="block text-white hover:text-gray-400">Inicio</a>
+            <a href="index.html" class="block text-white hover:text-gray-400">Inicio</a>
             <a href="productos.html" class="block text-white hover:text-gray-400">Catálogo</a>
             <a href="blogs.html" class="block text-white hover:text-gray-400">Blogs</a>
             <a href="nosotros.html" class="block text-white hover:text-gray-400">Nosotros</a>
@@ -44,16 +53,9 @@
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-4 py-8 flex-grow">
-        <h1 class="text-4xl font-bold text-white mb-8 text-center">Nuestro Catálogo</h1>
-        <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            </div>
-    </main>
+    <main id="blog-content" class="max-w-4xl mx-auto px-4 py-12 flex-grow">
+        </main>
 
-    <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden z-50">
-        <div id="modal-content" class="bg-neutral-800 rounded-lg shadow-xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative">
-            </div>
-    </div>
     <footer class="mt-auto w-full">
         <div class="bg-neutral-800 text-white py-6">
             <div class="max-w-7xl mx-auto px-4 text-center">
@@ -63,10 +65,9 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="src/js/Responsive_menu.js" defer></script>
     <script src="src/js/shared.js"></script> 
     <script src="src/js/auth.js"></script>
-    <script src="src/js/productos.js"></script>
+    <script src="src/js/detalle-blog.js"></script>
 </body>
 </html>
